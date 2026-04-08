@@ -7,7 +7,7 @@ export function HeroSection() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 1700);
+    }, 1300);
 
     return () => clearTimeout(timer);
   }, []);
@@ -96,7 +96,7 @@ export function HeroSection() {
                 transition={{ duration: 0.55, delay: 0.22 }}
                 className="text-white/55 text-xs sm:text-sm tracking-[0.25em] uppercase font-mono"
               >
-                Publishing Visual Identity Into Code
+                Web Publisher · UI Markup · Frontend
               </motion.p>
             </motion.div>
           </motion.div>
@@ -172,7 +172,7 @@ export function HeroSection() {
             <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-[#00FF41] opacity-50" />
 
             <div className="absolute -bottom-8 left-0 font-mono text-[11px] tracking-[0.25em] uppercase text-white/35">
-              Visual / Markup / Interaction
+              Web Publisher · UI Markup · Frontend
             </div>
           </motion.div>
 
