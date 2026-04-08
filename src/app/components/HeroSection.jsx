@@ -85,7 +85,7 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-8 group">
               <span className="text-[#00FF41] w-24 tracking-wider uppercase">Phone</span>
-              <span className="text-white/80 group-hover:text-white transition-colors">010-6803-4650</span>
+              <span className="text-white/80 group-hover:text-white transition-colors">010-1234-5678</span>
             </div>
             <div className="flex items-center gap-8 group">
               <span className="text-[#00FF41] w-24 tracking-wider uppercase">Email</span>

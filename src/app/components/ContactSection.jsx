@@ -5,7 +5,7 @@ import { Mail, Phone, Github } from "lucide-react";
 export function ContactSection() {
   const socialLinks = [
     { icon: Mail, label: "Email", href: "mailto:deldeldep@gmail.com", handle: "deldeldep@gmail.com" },
-    { icon: Phone, label: "Phone", href: "tel:010-6803-4650", handle: "010-6803-4650" }, 
+    { icon: Phone, label: "Phone", href: "tel:010-1234-5678", handle: "010-1234-5678" }, 
     { icon: Github, label: "GitHub", href: "https://github.com/deldeldep", handle: "@deldeldep" },
   ];
 
