@@ -2,14 +2,16 @@ import { motion } from "motion/react";
 
 export function AboutSection() {
   const techStack = [
-    "React & Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Three.js",
-    "Node.js",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "jQuery",
+    "React",
     "Figma",
-    "WebGL",
+    "Photoshop",
+    "Illustrator",
+    "Premiere Pro",
+    "After Effects",
   ];
 
   return (
@@ -30,15 +32,12 @@ export function AboutSection() {
           </h2>
 
           <div className="space-y-8">
-            <p className="text-2xl leading-relaxed text-white/90" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
-              I'm a digital artisan focused on creating sophisticated interfaces 
-              where precision meets creativity. Every pixel serves a purpose.
+            <p className="text-2xl leading-relaxed text-white/90 keep-all" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+              저는 기획의도와 디자인의 가치를 완벽한 코드로 번역하는 웹 퍼블리셔입니다. 화면의 픽셀 하나, 코드 한 줄에도 타당한 이유를 담아냅니다.
             </p>
 
-            <p className="text-lg leading-relaxed text-white/60" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
-              With over 8 years of experience in digital product design and 
-              development, I specialize in crafting experiences that blend 
-              minimalist aesthetics with cutting-edge technology.
+            <p className="text-lg leading-relaxed text-white/60 keep-all" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+              시각적인 아름다움은 물론, 다양한 디바이스에 최적화된 반응형 웹 환경을 구축합니다. 영상 콘텐츠와 모션 그래픽에 대한 높은 이해도를 바탕으로, 정적인 화면을 넘어 생동감 있고 몰입감 넘치는 사용자 경험을 만들어냅니다.
             </p>
 
             <motion.div
@@ -70,28 +69,28 @@ export function AboutSection() {
           <div className="space-y-12">
             <div>
               <h3 className="text-xl mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
-                Digital Product Design
+                UI/UX Web Publishing
               </h3>
-              <p className="text-white/60 font-mono text-sm leading-relaxed">
-                End-to-end design solutions from concept to deployment
+              <p className="text-white/60 font-mono text-sm leading-relaxed keep-all">
+                사용자 중심의 직관적인 인터페이스 설계 및 웹 표준/웹 접근성을 준수한 시맨틱 마크업 구현
               </p>
             </div>
 
             <div>
               <h3 className="text-xl mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
-                Interactive Experiences
+                Interactive Web Contents
               </h3>
-              <p className="text-white/60 font-mono text-sm leading-relaxed">
-                Motion design and WebGL-powered immersive interfaces
+              <p className="text-white/60 font-mono text-sm leading-relaxed keep-all">
+                동적인 애니메이션과 영상 매체를 활용한 트렌디하고 몰입감 있는 웹 화면 개발
               </p>
             </div>
 
             <div>
               <h3 className="text-xl mb-4" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}>
-                Brand & Visual Identity
+                Responsive & Cross-Browsing
               </h3>
-              <p className="text-white/60 font-mono text-sm leading-relaxed">
-                Crafting distinctive visual languages for digital products
+              <p className="text-white/60 font-mono text-sm leading-relaxed keep-all">
+                PC, 태블릿, 모바일 등 모든 디바이스와 브라우저 환경에서 깨짐 없이 완벽하게 동작하는 웹 구축
               </p>
             </div>
           </div>
@@ -131,16 +130,16 @@ export function AboutSection() {
       >
         <div className="text-center">
           <motion.h3
-            className="text-5xl lg:text-7xl tracking-tight leading-tight"
+            className="text-5xl lg:text-6xl tracking-tight leading-tight keep-all"
             style={{ fontFamily: 'Inter, sans-serif', fontWeight: 900 }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            TURNING COMPLEX PROBLEMS
+            기획과 디자인의 가치를
             <br />
-            INTO <span style={{ color: '#00FF41' }}>ELEGANT SOLUTIONS</span>
+            <span style={{ color: '#00FF41' }}>생동감 있는 웹 경험으로</span>
           </motion.h3>
         </div>
       </motion.div>

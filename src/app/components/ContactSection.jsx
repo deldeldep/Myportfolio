@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+// 💡 Linkedin 대신 Phone 아이콘을 불러옵니다. (Twitter는 사용하지 않아 제거했습니다)
+import { Mail, Phone, Github } from "lucide-react"; 
 
 export function ContactSection() {
   const socialLinks = [
-    { icon: Mail, label: "Email", href: "mailto:contact@alexkim.design", handle: "contact@alexkim.design" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", handle: "/in/alexkim" },
-    { icon: Github, label: "GitHub", href: "https://github.com", handle: "@alexkim" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com", handle: "@alexkim_design" },
+    { icon: Mail, label: "Email", href: "mailto:deldeldep@gmail.com", handle: "deldeldep@gmail.com" },
+    { icon: Phone, label: "Phone", href: "tel:010-6803-4650", handle: "010-6803-4650" }, 
+    { icon: Github, label: "GitHub", href: "https://github.com/deldeldep", handle: "@deldeldep" },
   ];
 
   return (
@@ -23,32 +23,30 @@ export function ContactSection() {
             className="text-sm font-mono uppercase tracking-[0.3em] mb-16"
             style={{ color: '#00FF41' }}
           >
-            Let's Connect
+            Contact
           </h2>
 
           <motion.h3
-            className="text-6xl lg:text-8xl tracking-tight leading-tight mb-8"
+            className="text-5xl lg:text-7xl tracking-tight leading-tight mb-8 keep-all"
             style={{ fontFamily: 'Inter, sans-serif', fontWeight: 900 }}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            READY TO CREATE
-            <br />
-            <span style={{ color: '#00FF41' }}>SOMETHING GREAT?</span>
+            아이디어를 현실로
           </motion.h3>
 
           <motion.p
-            className="text-xl text-white/60 max-w-2xl mx-auto"
+            className="text-xl text-white/60 max-w-2xl mx-auto keep-all"
             style={{ fontFamily: 'Inter, sans-serif' }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            I'm currently available for freelance projects and collaborations.
-            Let's turn your vision into reality.
+            웹 퍼블리싱 및 프론트엔드 관련 채용 제안이나 협업 문의를 환영합니다. 
+            함께 성장하며 멋진 결과물을 만들어갈 기회를 기다리고 있습니다.
           </motion.p>
         </motion.div>
 
@@ -58,7 +56,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-24"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24" 
         >
           {socialLinks.map((social, index) => {
             const Icon = social.icon;
@@ -73,7 +71,7 @@ export function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, x: 8 }}
-                className="group border border-white/10 p-8 hover:border-[#00FF41] transition-all duration-300 relative overflow-hidden"
+                className="group border border-white/10 p-8 hover:border-[#00FF41] transition-all duration-300 relative overflow-hidden block"
               >
                 <div className="absolute inset-0 bg-[#00FF41] opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
                 <div className="flex items-center justify-between relative z-10">
@@ -115,12 +113,12 @@ export function ContactSection() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="font-mono text-xs text-white/40 tracking-wider">
-              © 2026 ALEX KIM. ALL RIGHTS RESERVED.
+              © 2026 CHAE SEOYEONG. ALL RIGHTS RESERVED.
             </div>
             
             <div className="flex items-center gap-8">
               <div className="font-mono text-xs text-white/40 tracking-wider">
-                DESIGNED & DEVELOPED WITH <span style={{ color: '#00FF41' }}>■</span> PRECISION
+                DESIGNED & DEVELOPED BY <span style={{ color: '#00FF41' }}>■</span> CHAE SEOYEONG
               </div>
             </div>
           </div>
@@ -132,9 +130,7 @@ export function ContactSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="font-mono text-xs tracking-[0.3em] uppercase" style={{ color: '#00FF41' }}>
-              Where Code Meets Craft
-            </p>
+
           </motion.div>
         </motion.div>
       </div>

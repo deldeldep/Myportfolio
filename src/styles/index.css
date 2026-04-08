@@ -1,3 +1,24 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+/* index.css */
+
+/* 커스텀 스크롤바 스타일링 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* 스크롤바 두께를 얇게 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02); /* 트랙 배경색 (어둡게) */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); /* 평소 스크롤바 색상 */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00FF41; /* 마우스 오버 시 네온 그린으로 강조! */
+}

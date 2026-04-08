@@ -16,10 +16,9 @@ export function WorksList({ projects }) {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      if (containerRef.current && hoveredId !== null) {
-        const rect = containerRef.current.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left);
-        mouseY.set(e.clientY - rect.top);
+      if (hoveredId !== null) {
+        mouseX.set(e.clientX);
+        mouseY.set(e.clientY);
       }
     };
 
@@ -54,7 +53,12 @@ export function WorksList({ projects }) {
               onMouseLeave={() => setHoveredId(null)}
               className="group relative"
             >
-              <div className="border-t border-white/10 py-8 cursor-pointer">
+              <a 
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-t border-white/10 py-8 cursor-pointer block"
+              >
                 <div className="flex items-center gap-16">
                   <motion.span
                     className="font-mono text-sm text-white/40"
@@ -95,7 +99,7 @@ export function WorksList({ projects }) {
                     {project.category}
                   </motion.span>
                 </div>
-              </div>
+              </a>
 
               {/* Floating Image */}
               <AnimatePresence>
