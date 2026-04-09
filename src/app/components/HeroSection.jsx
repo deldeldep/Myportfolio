@@ -213,9 +213,9 @@ export function HeroSection() {
               </p>
 
               <p className="text-white/60 leading-relaxed keep-all text-lg mb-12 max-w-xl">
-                사용자를 배려하는 직관적인 UI와 디테일한 인터랙션을 고민합니다.
-                시각적인 아름다움뿐만 아니라 탄탄한 마크업과 웹 표준을 준수하며,
-                코드로 브랜드의 가치를 전달하는 퍼블리셔입니다.
+                사용자를 배려하는 직관적인 UI와 섬세한 인터랙션을 고민합니다.
+                단순히 아름다움뿐만 아니라 탄탄한 마크업과 웹 표준을 준수하며,
+                코드로 브랜드의 가치를 전달하겠습니다.
               </p>
             </motion.div>
 

@@ -50,7 +50,7 @@ export const projectsData = [
     title: "BLUEBOTTLE",
     category: "CLONE CODING",
     image: "/img/bluebottle.png",
-    description: "클론코딩, API, CRUD, REACT, AI, FIREBASE",
+    description: "클론코딩, API, CRUD, REACT, AI",
     url: "https://deldeldep.github.io/gptbluebottle/", 
   },
   {
@@ -59,7 +59,7 @@ export const projectsData = [
     title: "NINETREEHOTELS",
     category: "CLONE CODING",
     image: "/img/ninetreehotels.png",
-    description: "클론코딩, API, CRUD, REACT, AI, FIREBASE",
+    description: "클론코딩, 반응형, API, CRUD, REACT, AI",
     url: "https://ninetreehotels.vercel.app/", 
   },
   {
@@ -68,7 +68,7 @@ export const projectsData = [
     title: "NEWS SITE",
     category: "Web Development",
     image: "/img/news.png",
-    description: "API, REACT, AI",
+    description: "반응형, API, REACT, AI",
     url: "https://news-coral-six.vercel.app/", 
   },
   {
@@ -77,7 +77,7 @@ export const projectsData = [
     title: "TEAM PROJECT01",
     category: "Brand Identity",
     image: "/img/moodscape.png",
-    description: "팀프로젝트, 기획, API, REACT, VERCEL",
+    description: "팀프로젝트, 기획, 반응형, API, REACT, VERCEL",
     url: "https://mood-scape-umber.vercel.app/", 
   },
   {
