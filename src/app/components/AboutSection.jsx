@@ -2,65 +2,50 @@ import { motion } from "motion/react";
 
 export function AboutSection() {
   const techStack = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "jQuery",
-    "React",
-    "Figma",
-    "Photoshop",
-    "Illustrator",
-    "Premiere Pro",
-    "After Effects",
+    "HTML", 
+    "CSS", 
+    "JavaScript", 
+    "JQuery", 
+    "React", 
+    "Figma", 
+    "Photoshop", 
+    "Illustrator", 
+    "Premiere Pro", 
+    "After Effects"
+  ];
+  const licenses = [
+    "GTQ (그래픽기술자격) 1급", 
+    "GTQI (일러스트레이터) 1급", 
+    "웹디자인개발기능사"
   ];
 
   return (
-    <section className="min-h-screen py-32 px-[10%] flex flex-col justify-center">
-      <div className="max-w-4xl mx-auto w-full">
-        {/* Tech Stack 영역 */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-16">
-            <h2
-              className="text-sm font-mono uppercase tracking-[0.3em]"
-              style={{ color: '#00FF41' }}
-            >
-              Tech Stack
-            </h2>
-            <div className="h-[1px] w-12 bg-[#00FF41] mx-auto mt-4" />
+    <section id="about" className="min-h-screen py-20 md:py-32 px-[5%] md:px-[10%] flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+        {/* License 영역 */}
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+          <h2 className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] mb-8 md:mb-16" style={{ color: '#00FF41' }}>License</h2>
+          <div className="space-y-3 md:space-y-4">
+            {licenses.map((license, index) => (
+              <motion.div key={license} className="border border-white/10 px-4 py-4 md:px-6 md:py-5 hover:border-[#00FF41] hover:bg-[#00FF41]/5 transition-all duration-300 cursor-default group">
+                <span className="font-mono text-xs md:text-sm text-white/80 group-hover:text-[#00FF41] transition-colors">{license}</span>
+              </motion.div>
+            ))}
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {techStack.map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="border border-white/10 px-6 py-8 flex items-center justify-center hover:border-[#00FF41] hover:bg-[#00FF41]/5 transition-all duration-300 cursor-default group"
-              >
-                <span className="font-mono text-sm text-white/60 group-hover:text-[#00FF41] transition-colors">
-                  {tech}
-                </span>
+        </motion.div>
+
+        {/* Tech Stack 영역 */}
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }}>
+          <h2 className="text-xs md:text-sm font-mono uppercase tracking-[0.3em] mb-8 md:mb-16" style={{ color: '#00FF41' }}>Tech Stack</h2>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            {techStack.map((tech) => (
+              <motion.div key={tech} className="border border-white/10 px-4 py-3 md:px-6 md:py-4 hover:border-[#00FF41] hover:bg-[#00FF41]/5 transition-all duration-300 cursor-default group">
+                <span className="font-mono text-xs md:text-sm text-white/80 group-hover:text-[#00FF41] transition-colors">{tech}</span>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </div>
-
-      {/* 하단 구분선 (선택 사항) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        viewport={{ once: true }}
-        className="mt-32 border-t border-white/10"
-      />
     </section>
   );
 }

@@ -104,8 +104,7 @@ export function HeroSection() {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-[10%] relative overflow-hidden bg-black">
-        {/* subtle background accents */}
+      <section id="home" className="min-h-screen flex items-center justify-center px-[10%] relative overflow-hidden bg-black">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(0,255,65,0.08),transparent_30%)]" />
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.05),transparent_28%)]" />
@@ -144,61 +143,28 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="relative z-10 w-full max-w-6xl mt-20 lg:mt-0 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left: Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -36 }}
-            animate={{
-              opacity: showIntro ? 0 : 1,
-              x: showIntro ? -36 : 0,
-            }}
-            transition={{
-              duration: 0.95,
-              delay: 0.18,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative group w-full max-w-md mx-auto lg:mx-0"
-          >
-            <div className="w-full aspect-[4/5] bg-white/5 border border-white/10 overflow-hidden relative rounded-sm backdrop-blur-sm">
-              <img
-                src="/img/my-profile.png"
-                alt="프로필"
-                className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-[#00FF41]/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="relative z-10 w-full max-w-6xl mt-12 lg:mt-0 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <motion.div className="relative group w-full max-w-[280px] sm:max-w-md mx-auto lg:mx-0">
+            <div className="w-full aspect-[4/5] bg-white/5 border border-white/10 overflow-hidden relative rounded-sm">
+              <img src="/img/my-profile.png" alt="프로필" className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" />
             </div>
-
-            <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-[#00FF41] opacity-50" />
-            <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-[#00FF41] opacity-50" />
-
-            <div className="absolute -bottom-8 left-0 font-mono text-[11px] tracking-[0.25em] uppercase text-white/35">
+            <div className="absolute -bottom-6 left-0 font-mono text-[9px] md:text-[11px] tracking-[0.2em] uppercase text-white/35">
               Web Publisher · UI Markup · Frontend
             </div>
           </motion.div>
 
           {/* Right: Profile Info */}
-          <div className="flex flex-col justify-center">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{
-                opacity: showIntro ? 0 : 1,
-                y: showIntro ? 24 : 0,
-              }}
-              transition={{
-                duration: 0.85,
-                delay: 0.28,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
+          <div className="flex flex-col justify-center text-center lg:text-left">
+            <motion.div>
               <p
-                className="font-mono text-sm tracking-[0.32em] uppercase mb-6"
+                className="font-mono text-xs md:text-sm tracking-[0.3em] uppercase mb-4 md:mb-6"
                 style={{ color: "#00FF41" }}
               >
-                Hello, I&apos;m
+                Hello, I'm
               </p>
 
               <h1
-                className="text-5xl lg:text-7xl tracking-tight mb-4"
+                className="text-4xl sm:text-5xl lg:text-7xl tracking-tight mb-2 md:mb-4"
                 style={{
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 900,
@@ -208,55 +174,38 @@ export function HeroSection() {
                 채서영
               </h1>
 
-              <p className="text-2xl lg:text-3xl font-light text-white/80 mb-8 font-mono">
+              <p className="text-xl md:text-3xl font-light text-white/80 mb-6 md:mb-8 font-mono">
                 Web Publisher
               </p>
-
-              <p className="text-white/60 leading-relaxed keep-all text-lg mb-12 max-w-xl">
-                사용자를 배려하는 직관적인 UI와 섬세한 인터랙션을 고민합니다.
-                단순히 아름다움뿐만 아니라 탄탄한 마크업과 웹 표준을 준수하며,
-                코드로 브랜드의 가치를 전달하겠습니다.
+              
+              <p className="text-white/60 leading-relaxed text-sm md:text-base mb-8 md:mb-12 max-w-xl mx-auto lg:mx-0 break-keep">
+                사용자를 배려하는 직관적인 UI와 섬세한 인터랙션을 고민합니다. 코드로 브랜드의 가치를 전달하겠습니다.
               </p>
             </motion.div>
 
-            {/* Contact Details */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{
-                opacity: showIntro ? 0 : 1,
-                y: showIntro ? 12 : 0,
-              }}
-              transition={{
-                duration: 0.75,
-                delay: 0.44,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="space-y-5 border-t border-white/10 pt-8 font-mono text-sm"
-            >
-              <div className="flex items-center gap-8 group">
-                <span className="text-[#00FF41] w-24 tracking-wider uppercase">
+            <motion.div className="space-y-4 font-mono text-xs md:text-sm max-w-sm mx-auto lg:mx-0 border-b border-white/10 pb-8">
+              <div className="grid grid-cols-[100px_1fr] gap-4 items-center group">
+                <span className="text-[#00FF41] tracking-wider uppercase text-left">
                   Phone
                 </span>
-                <span className="text-white/80 group-hover:text-white transition-colors">
+                <span className="text-white/80 transition-colors text-left">
                   010-1234-5678
                 </span>
               </div>
-
-              <div className="flex items-center gap-8 group">
-                <span className="text-[#00FF41] w-24 tracking-wider uppercase">
+              <div className="grid grid-cols-[100px_1fr] gap-4 items-center group">
+                <span className="text-[#00FF41] tracking-wider uppercase text-left">
                   Email
                 </span>
-                <span className="text-white/80 group-hover:text-white transition-colors">
+                <span className="text-white/80 transition-colors text-left">
                   deldeldep@gmail.com
                 </span>
               </div>
-
-              <div className="flex items-center gap-8 group">
-                <span className="text-[#00FF41] w-24 tracking-wider uppercase">
+              <div className="grid grid-cols-[100px_1fr] gap-4 items-center group">
+                <span className="text-[#00FF41] tracking-wider uppercase text-left">
                   Location
                 </span>
-                <span className="text-white/80 group-hover:text-white transition-colors">
-                  Seoul, South Korea
+                <span className="text-white/80 transition-colors text-left">
+                  Seoul, KR
                 </span>
               </div>
             </motion.div>

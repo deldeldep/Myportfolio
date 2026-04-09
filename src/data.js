@@ -87,6 +87,6 @@ export const projectsData = [
     category: "Brand Identity",
     image: "/img/eclat.png",
     description: "팀프로젝트, 기획, REACT, VERCEL",
-    url: "https://deldeldep.github.io/gwd/", 
+    url: "https://eclat-t.vercel.app/", 
   },
 ];

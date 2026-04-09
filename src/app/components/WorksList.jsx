@@ -2,8 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue, useSpring, AnimatePresence } from "motion/react";
 
 
-
-
 export function WorksList({ projects }) {
   const [hoveredId, setHoveredId] = useState(null);
   const containerRef = useRef(null);
@@ -27,7 +25,7 @@ export function WorksList({ projects }) {
   }, [hoveredId, mouseX, mouseY]);
 
   return (
-    <section className="min-h-screen py-32 px-[10%]" ref={containerRef}>
+    <section id="work" className="min-h-screen py-32 px-[10%]" ref={containerRef}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,43 +57,21 @@ export function WorksList({ projects }) {
                 rel="noopener noreferrer"
                 className="border-t border-white/10 py-8 cursor-pointer block"
               >
-                <div className="flex items-center gap-16">
-                  <motion.span
-                    className="font-mono text-sm text-white/40"
-                    animate={
-                      hoveredId === project.id
-                        ? { x: 10, color: '#00FF41' }
-                        : { x: 0, color: 'rgba(255,255,255,0.4)' }
-                    }
-                    transition={{ duration: 0.3 }}
-                  >
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:gap-16">
+                  <motion.span className="font-mono text-xs md:text-sm text-white/40">
                     {project.number}
                   </motion.span>
 
                   <div className="flex-1">
                     <motion.h3
-                      className="text-6xl tracking-tight"
-                      style={{ fontFamily: 'Inter, sans-serif', fontWeight: 800 }}
-                      animate={
-                        hoveredId === project.id
-                          ? { x: 20, color: '#FFFFFF' }
-                          : { x: 0, color: '#FFFFFF' }
-                      }
-                      transition={{ duration: 0.3 }}
+                      className="text-3xl sm:text-4xl md:text-6xl tracking-tight break-keep"
+                      style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
                     >
                       {project.title}
                     </motion.h3>
                   </div>
 
-                  <motion.span
-                    className="font-mono text-xs uppercase tracking-wider text-white/40"
-                    animate={
-                      hoveredId === project.id
-                        ? { opacity: 1 }
-                        : { opacity: 0.4 }
-                    }
-                    transition={{ duration: 0.3 }}
-                  >
+                  <motion.span className="font-mono text-[10px] md:text-xs uppercase tracking-wider text-white/40">
                     {project.category}
                   </motion.span>
                 </div>

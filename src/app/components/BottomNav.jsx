@@ -12,18 +12,26 @@ export function BottomNav() {
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
 
-      // Determine active section based on scroll position
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       
-      // Simple section detection
-      if (scrollPosition < window.innerHeight) {
-        setActiveSection("home");
-      } else if (scrollPosition < window.innerHeight * 2.5) {
-        setActiveSection("work");
-      } else if (scrollPosition < window.innerHeight * 4) {
-        setActiveSection("about");
-      } else {
-        setActiveSection("contact");
+      const sections = [
+        { id: "home", name: "home" },
+        { id: "work", name: "work" },
+        { id: "projects", name: "work" }, 
+        { id: "about", name: "about" },
+        { id: "contact", name: "contact" }
+      ];
+
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const top = element.offsetTop;
+          const bottom = top + element.offsetHeight;
+
+          if (scrollPosition >= top && scrollPosition < bottom) {
+            setActiveSection(section.name);
+          }
+        }
       }
     };
 
@@ -32,22 +40,13 @@ export function BottomNav() {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    let scrollTo = 0;
-    switch (sectionId) {
-      case "home":
-        scrollTo = 0;
-        break;
-      case "work":
-        scrollTo = window.innerHeight;
-        break;
-      case "about":
-        scrollTo = window.innerHeight * 2.5;
-        break;
-      case "contact":
-        scrollTo = document.documentElement.scrollHeight - window.innerHeight;
-        break;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth"
+      });
     }
-    window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
 
   return (
@@ -55,20 +54,20 @@ export function BottomNav() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.5, duration: 0.8 }}
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
+      className="fixed bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-min"
     >
       <div
-        className="backdrop-blur-xl rounded-full border shadow-2xl px-8 py-4"
+        className="backdrop-blur-xl rounded-full border shadow-2xl px-5 py-3 md:px-8 md:py-4 mx-auto"
         style={{
           backgroundColor: 'rgba(13, 13, 13, 0.8)',
           borderColor: 'rgba(255, 255, 255, 0.1)',
         }}
       >
-        <div className="flex items-center gap-8">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
           {/* Navigation Items */}
           <button
             onClick={() => scrollToSection("home")}
-            className="group relative p-2 transition-all duration-300"
+            className="group relative p-1.5 md:p-2 transition-all duration-300"
             aria-label="Home"
           >
             <Home
@@ -90,7 +89,7 @@ export function BottomNav() {
 
           <button
             onClick={() => scrollToSection("work")}
-            className="group relative p-2 transition-all duration-300"
+            className="group relative p-1.5 md:p-2 transition-all duration-300"
             aria-label="Work"
           >
             <Briefcase
@@ -110,10 +109,10 @@ export function BottomNav() {
             )}
           </button>
 
-          <div className="w-[1px] h-6 bg-white/10" />
+          <div className="w-[1px] h-4 md:h-6 bg-white/10 shrink-0" />
 
           {/* Progress Bar */}
-          <div className="relative w-32 h-1 bg-white/10 rounded-full overflow-hidden">
+          <div className="relative w-12 sm:w-20 md:w-32 h-1 bg-white/10 rounded-full overflow-hidden shrink-0">
             <motion.div
               className="absolute inset-y-0 left-0 rounded-full"
               style={{
@@ -124,11 +123,11 @@ export function BottomNav() {
             />
           </div>
 
-          <div className="w-[1px] h-6 bg-white/10" />
+          <div className="w-[1px] h-4 md:h-6 bg-white/10 shrink-0" />
 
           <button
             onClick={() => scrollToSection("about")}
-            className="group relative p-2 transition-all duration-300"
+            className="group relative p-1.5 md:p-2 transition-all duration-300"
             aria-label="About"
           >
             <div
@@ -149,7 +148,7 @@ export function BottomNav() {
 
           <button
             onClick={() => scrollToSection("contact")}
-            className="group relative p-2 transition-all duration-300"
+            className="group relative p-1.5 md:p-2 transition-all duration-300"
             aria-label="Contact"
           >
             <Mail
@@ -172,8 +171,8 @@ export function BottomNav() {
       </div>
 
       {/* Time Display */}
-      <div className="absolute -top-12 left-1/2 -translate-x-1/2">
-        <p className="font-mono text-xs text-white/40 tracking-wider">
+      <div className="absolute -top-10 md:-top-12 left-1/2 -translate-x-1/2">
+        <p className="font-mono text-[10px] md:text-xs text-white/40 tracking-wider whitespace-nowrap">
           {new Date().toLocaleTimeString('en-US', { 
             hour: '2-digit', 
             minute: '2-digit',
