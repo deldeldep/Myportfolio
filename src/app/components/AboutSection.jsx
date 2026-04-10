@@ -7,13 +7,18 @@ export function AboutSection() {
     "JavaScript", 
     "JQuery", 
     "React", 
+    "Gpt", 
+    "Cursor", 
+    "Claude", 
     "Figma", 
     "Photoshop", 
     "Illustrator", 
     "Premiere Pro", 
-    "After Effects"
+    "After Effects",
+    "CapCut",
   ];
   const licenses = [
+    "운전면허 (2종 보통)", 
     "GTQ (포토샵) 1급", 
     "GTQI (일러스트레이터) 1급", 
     "웹디자인개발기능사"

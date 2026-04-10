@@ -175,7 +175,7 @@ export function HeroSection() {
               </h1>
 
               <p className="text-xl md:text-3xl font-light text-white/80 mb-6 md:mb-8 font-mono">
-                Web Publisher
+                CHAE SEOYEONG
               </p>
               
               <p className="text-white/60 leading-relaxed text-sm md:text-base mb-8 md:mb-12 max-w-xl mx-auto lg:mx-0 break-keep">
