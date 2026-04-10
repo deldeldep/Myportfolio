@@ -14,7 +14,7 @@ export function AboutSection() {
     "After Effects"
   ];
   const licenses = [
-    "GTQ (그래픽기술자격) 1급", 
+    "GTQ (포토샵) 1급", 
     "GTQI (일러스트레이터) 1급", 
     "웹디자인개발기능사"
   ];
