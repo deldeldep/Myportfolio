@@ -164,7 +164,7 @@ export function HeroSection() {
               </p>
 
               <h1
-                className="text-4xl sm:text-5xl lg:text-7xl tracking-tight mb-2 md:mb-4"
+                className="text-4xl sm:text-4xl lg:text-6xl tracking-tight mb-2 md:mb-4"
                 style={{
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 900,

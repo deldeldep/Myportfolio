@@ -6,7 +6,8 @@ export const projectsData = [
     category: "CLONE CODING",
     image: "/img/gwd.png",
     description: "관공서 클론코딩, HTML, CSS",
-    url: "https://deldeldep.github.io/gwd/", 
+    url: "https://deldeldep.github.io/gwd/",
+    github: "https://github.com/deldeldep/gwd", 
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const projectsData = [
     category: "CLONE CODING",
     image: "/img/hotels.png",
     description: "클론코딩, HTML, SCSS, API",
-    url: "https://deldeldep.github.io/hotels/", 
+    url: "https://deldeldep.github.io/hotels/",
+    github: "https://github.com/deldeldep/hotels", 
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export const projectsData = [
     category: "Web Development",
     image: "/img/cook.png",
     description: "API, SCSS, REACT",
-    url: "https://cook-eta-lilac.vercel.app/",  
+    url: "https://cook-eta-lilac.vercel.app/",
+    github: "https://github.com/deldeldep/cook",  
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const projectsData = [
     category: "Web Development",
     image: "/img/tmdb.png",
     description: "API, SCSS, REACT",
-    url: "https://deldeldep.github.io/tmdbMo1/",  
+    url: "https://deldeldep.github.io/tmdbMo1/",
+    github: "https://github.com/deldeldep/tmdbMo1",  
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ export const projectsData = [
     category: "Web Development",
     image: "/img/mytrip.png",
     description: "API, CRUD, REACT, AI, FIREBASE",
-    url: "https://mytrip-89aa2.web.app/", 
+    url: "https://mytrip-89aa2.web.app/",
+    github: "https://github.com/deldeldep/aiproject", 
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ export const projectsData = [
     category: "CLONE CODING",
     image: "/img/bluebottle.png",
     description: "클론코딩, API, CRUD, REACT, AI",
-    url: "https://deldeldep.github.io/gptbluebottle/", 
+    url: "https://deldeldep.github.io/gptbluebottle/",
+    github: "https://github.com/deldeldep/gptbluebottle", 
   },
   {
     id: 7,
@@ -60,7 +66,8 @@ export const projectsData = [
     category: "CLONE CODING",
     image: "/img/ninetreehotels.png",
     description: "클론코딩, 반응형, API, CRUD, REACT, AI",
-    url: "https://ninetreehotels.vercel.app/", 
+    url: "https://ninetreehotels.vercel.app/",
+    github: "https://github.com/deldeldep/ninetreehotels", 
   },
   {
     id: 8,
@@ -69,7 +76,8 @@ export const projectsData = [
     category: "Web Development",
     image: "/img/news.png",
     description: "반응형, API, REACT, AI",
-    url: "https://news-coral-six.vercel.app/", 
+    url: "https://news-coral-six.vercel.app/",
+    github: "https://github.com/deldeldep/news", 
   },
   {
     id: 9,
@@ -78,7 +86,8 @@ export const projectsData = [
     category: "Brand Identity",
     image: "/img/moodscape.png",
     description: "팀프로젝트, 기획, 반응형, API, REACT, VERCEL",
-    url: "https://mood-scape-umber.vercel.app/", 
+    url: "https://mood-scape-umber.vercel.app/",
+    github: "https://github.com/ksyeon068/MoodScape/tree/csy", 
   },
   {
     id: 10,
@@ -87,6 +96,7 @@ export const projectsData = [
     category: "Brand Identity",
     image: "/img/eclat.png",
     description: "팀프로젝트, 기획, REACT, VERCEL",
-    url: "https://eclat-t.vercel.app/", 
+    url: "https://eclat-t.vercel.app/",
+    github: "https://github.com/seongeun040624/eclatT/tree/csy", 
   },
 ];
