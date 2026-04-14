@@ -5,7 +5,7 @@ export const projectsData = [
     title: "TEAM PROJECT01",
     category: "Brand Identity",
     image: "/img/eclat.png",
-    description: "팀프로젝트, 기획, REACT, VERCEL",
+    description: "팀프로젝트, 기획, REACT, VERCEL배포",
     url: "https://eclat-t.vercel.app/",
     github: "https://github.com/seongeun040624/eclatT/tree/csy", 
 
@@ -17,7 +17,7 @@ export const projectsData = [
     title: "TEAM PROJECT02",
     category: "Brand Identity",
     image: "/img/moodscape.png",
-    description: "팀프로젝트, 기획, 반응형, API, REACT, VERCEL",
+    description: "팀프로젝트, 기획, 반응형, API, REACT, VERCEL배포",
     url: "https://mood-scape-umber.vercel.app/",
     github: "https://github.com/ksyeon068/MoodScape/tree/csy", 
     
@@ -91,7 +91,7 @@ export const projectsData = [
     title: "TMDB",
     category: "Web Development",
     image: "/img/tmdb.png",
-    description: "API, SCSS, REACT",
+    description: "API, SCSS, REACT, GITHUBPAGES배포",
     url: "https://deldeldep.github.io/tmdbMo1/",
     github: "https://github.com/deldeldep/tmdbMo1",  
   },
