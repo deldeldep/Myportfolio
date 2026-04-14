@@ -72,12 +72,13 @@ export function HeroSection() {
                   duration: 0.9,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="text-[2.3rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] font-black text-white whitespace-nowrap leading-none"
+                className="text-[1.5rem] sm:text-3xl md:text-4xl lg:text-[5rem] font-black text-white whitespace-nowrap leading-none"
                 style={{
                   fontFamily: "Inter, sans-serif",
                   textShadow: "0 0 30px rgba(255,255,255,0.08)",
                 }}
               >
+                CHAE SEOYEONG<br />
                 PORTFOLIO
               </motion.h1>
 
@@ -224,7 +225,7 @@ export function HeroSection() {
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
